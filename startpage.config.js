@@ -1,5 +1,5 @@
 const defaultConfig = {
-	username: "Excalith",
+	username: "Ethan",
 	theme: {
 		backgroundColor: "#121317",
 		windowColor: "#1e212b",
@@ -62,19 +62,19 @@ const defaultConfig = {
 		hoverColor: "violet"
 	},
 	search: {
-		default: "https://google.com/search?q=",
+		default: "https://duckduckgo.com/?q=",
 		target: "_self",
 		shortcutRegex: "([A-Za-z0-9]+) (.*)",
 		shortcuts: [
 			{
-				alias: "g",
-				name: "Google Search",
-				url: "https://google.com/search?q={}"
-			},
-			{
 				alias: "d",
 				name: "DuckDuckGo Search",
 				url: "https://duckduckgo.com/?q={}"
+			},
+			{
+				alias: "g",
+				name: "Google Search",
+				url: "https://google.com/search?q={}"
 			},
 			{
 				alias: "b",
@@ -112,7 +112,7 @@ const defaultConfig = {
 				links: [
 					{
 						name: "Portfolio",
-						url: "https://cancellek.com",
+						url: "https://ethanyee.info",
 						icon: "mdi:web"
 					},
 					{
@@ -126,9 +126,9 @@ const defaultConfig = {
 						icon: "simple-icons:openai"
 					},
 					{
-						name: "OCI",
-						url: "https://www.oracle.com/cloud/",
-						icon: "simple-icons:oracle"
+						name: "Youtube",
+						url: "https://www.youtube.com/",
+						icon: "bi:youtube"
 					}
 				]
 			},
@@ -180,63 +180,63 @@ const defaultConfig = {
 						icon: "mdi:reddit"
 					},
 					{
-						name: "Polywork",
-						url: "https://polywork.com",
-						icon: "simple-icons:polywork"
+						name: "Instagram",
+						url: "https://www.instagram.com/",
+						icon: "mdi:instagram"
 					}
 				]
 			},
 			{
-				title: "Gaming",
+				title: "Education",
 				color: "cyan",
 				align: "left",
 				links: [
 					{
-						name: "Polygon",
-						url: "https://polygon.com",
-						icon: "uil:polygon"
+						name: "Canvas",
+						url: "https://canvas.uw.edu/",
+						icon: "arcticons:canvasstudent"
 					},
 					{
-						name: "IGN",
-						url: "https://ign.com",
-						icon: "mdi:currency-sign"
+						name: "Gradescope",
+						url: "https://www.gradescope.com/",
+						icon: "material-symbols:code"
 					},
 					{
-						name: "RPS",
-						url: "https://rockpapershotgun.com/",
-						icon: "ph:toilet-paper-bold"
+						name: "Drive",
+						url: "https://drive.google.com/drive/u/1/my-drive",
+						icon: "material-symbols:add-to-drive"
 					},
 					{
-						name: "80lv",
-						url: "https://80.lv/",
-						icon: "tabler:hand-rock"
+						name: "Neetcode",
+						url: "https://neetcode.io/practice",
+						icon: "tabler:brand-leetcode"
 					}
 				]
 			},
 			{
-				title: "Science",
+				title: "Research",
 				color: "blue",
 				align: "left",
 				links: [
 					{
-						name: "PopSci",
-						url: "https://popsci.com/",
-						icon: "material-symbols:science"
+						name: "Scholar",
+						url: "https://scholar.google.com/",
+						icon: "academicons:google-scholar"
 					},
 					{
-						name: "Space",
-						url: "fa6-solid:user-astronaut",
-						icon: "mdi:reddit"
+						name: "ML Mastery",
+						url: "https://machinelearningmastery.com/blog/",
+						icon: "fluent-mdl2:machine-learning"
 					},
 					{
-						name: "NASA",
-						url: "https://blogs.nasa.gov/",
-						icon: "simple-icons:nasa"
+						name: "SAIL",
+						url: "https://ai.stanford.edu/",
+						icon: "bi:filetype-ai"
 					},
 					{
-						name: "ESA",
-						url: "https://blogs.esa.int/",
-						icon: "mdi:black-mesa"
+						name: "CS4Env",
+						url: "https://cs4env.uw.edu/",
+						icon: "pajamas:machine-learning"
 					}
 				]
 			},

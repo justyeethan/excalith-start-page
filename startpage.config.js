@@ -3,7 +3,7 @@ const defaultConfig = {
 	theme: {
 		backgroundColor: "#121317",
 		windowColor: "#1e212b",
-		glowColor: "#6b5cb157",
+		glowColor: "#000c7c",
 		white: "#e2e2e2",
 		gray: "#97989d",
 		black: "#16161e",
@@ -59,7 +59,7 @@ const defaultConfig = {
 	urlLaunch: {
 		target: "_self",
 		defaultColor: "white",
-		hoverColor: "violet"
+		hoverColor: "blue"
 	},
 	search: {
 		default: "https://duckduckgo.com/?q=",
@@ -116,14 +116,14 @@ const defaultConfig = {
 						icon: "mdi:web"
 					},
 					{
-						name: "Keybase",
-						url: "https://keybase.io/",
-						icon: "fa-brands:keybase"
-					},
-					{
 						name: "GPT",
 						url: "https://chat.openai.com/",
 						icon: "simple-icons:openai"
+					},
+					{
+						name: "Netflix",
+						url: "http://www.netflix.com/",
+						icon: "mdi:netflix"
 					},
 					{
 						name: "Youtube",
@@ -148,9 +148,9 @@ const defaultConfig = {
 						icon: "ph:gitlab-logo-simple-fill"
 					},
 					{
-						name: "Dev.to",
-						url: "https://dev.to",
-						icon: "material-symbols:logo-dev"
+						name: "Vercel",
+						url: "https://vercel.com/",
+						icon: "ion:logo-vercel"
 					},
 					{
 						name: "Stack Overflow",
@@ -170,9 +170,9 @@ const defaultConfig = {
 						icon: "mdi:twitter"
 					},
 					{
-						name: "Mastodon",
-						url: "https://mastodon.social/",
-						icon: "ri:mastodon-fill"
+						name: "LinkedIn",
+						url: "https://www.linkedin.com/feed/",
+						icon: "mdi:linkedin"
 					},
 					{
 						name: "Reddit",

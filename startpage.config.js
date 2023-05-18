@@ -207,9 +207,9 @@ const defaultConfig = {
 						icon: "material-symbols:add-to-drive"
 					},
 					{
-						name: "Neetcode",
-						url: "https://neetcode.io/practice",
-						icon: "tabler:brand-leetcode"
+						name: "Docs",
+						url: "https://docs.google.com/",
+						icon: "iconoir:google-docs"
 					}
 				]
 			},
@@ -224,9 +224,9 @@ const defaultConfig = {
 						icon: "academicons:google-scholar"
 					},
 					{
-						name: "ML Mastery",
-						url: "https://machinelearningmastery.com/blog/",
-						icon: "fluent-mdl2:machine-learning"
+						name: "Overleaf",
+						url: "https://overleaf.com/",
+						icon: "simple-icons:overleaf"
 					},
 					{
 						name: "SAIL",
@@ -251,19 +251,19 @@ const defaultConfig = {
 						icon: "game-icons:techno-heart"
 					},
 					{
-						name: "Verge",
-						url: "https://www.theverge.com/",
-						icon: "arcticons:verge"
+						name: "Y-Combinator",
+						url: "https://www.ycombinator.com/",
+						icon: "cib:y-combinator"
 					},
 					{
-						name: "It's Foss",
-						url: "https://itsfoss.com/",
-						icon: "ri:mastodon-fill"
+						name: "Towards DS",
+						url: "https://towardsdatascience.com/",
+						icon: "ph:medium-logo-fill"
 					},
 					{
-						name: "9To5 Linux",
-						url: "https://9to5linux.com/",
-						icon: "uil:linux"
+						name: "Neetcode",
+						url: "https://neetcode.io/practice",
+						icon: "tabler:brand-leetcode"
 					}
 				]
 			}

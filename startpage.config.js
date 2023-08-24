@@ -116,11 +116,6 @@ const defaultConfig = {
 						icon: "mdi:web"
 					},
 					{
-						name: "GPT",
-						url: "https://chat.openai.com/",
-						icon: "simple-icons:openai"
-					},
-					{
 						name: "Netflix",
 						url: "http://www.netflix.com/",
 						icon: "mdi:netflix"
@@ -129,6 +124,11 @@ const defaultConfig = {
 						name: "Youtube",
 						url: "https://www.youtube.com/",
 						icon: "bi:youtube"
+					},
+					{
+						name: "Music",
+						url: "https://music.youtube.com/",
+						icon: "simple-icons:youtubemusic"
 					}
 				]
 			},
@@ -143,9 +143,9 @@ const defaultConfig = {
 						icon: "mdi:github"
 					},
 					{
-						name: "GitLab",
-						url: "https://gitlab.com",
-						icon: "ph:gitlab-logo-simple-fill"
+						name: "GPT",
+						url: "https://chat.openai.com/",
+						icon: "simple-icons:openai"
 					},
 					{
 						name: "Vercel",
@@ -256,14 +256,14 @@ const defaultConfig = {
 						icon: "cib:y-combinator"
 					},
 					{
-						name: "Towards DS",
-						url: "https://towardsdatascience.com/",
-						icon: "ph:medium-logo-fill"
+						name: "Leetcode",
+						url: "https://leetcode.com/",
+						icon: "simple-icons:leetcode"
 					},
 					{
 						name: "Neetcode",
 						url: "https://neetcode.io/practice",
-						icon: "tabler:brand-leetcode"
+						icon: "bi:rocket-fill"
 					}
 				]
 			}

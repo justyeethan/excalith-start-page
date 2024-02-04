@@ -1,3 +1,4 @@
+// Icons are from Iconify
 const defaultConfig = {
 	username: "Ethan",
 	theme: {
@@ -187,24 +188,24 @@ const defaultConfig = {
 				]
 			},
 			{
-				title: "Education",
+				title: "Life",
 				color: "cyan",
 				align: "left",
 				links: [
 					{
-						name: "Canvas",
-						url: "https://canvas.uw.edu/",
-						icon: "arcticons:canvasstudent"
+						name: "Utilities",
+						url: "https://www.myavista.com/sign-in",
+						icon: "lucide:utility-pole"
 					},
 					{
-						name: "Gradescope",
-						url: "https://www.gradescope.com/",
-						icon: "material-symbols:code"
+						name: "Rent",
+						url: "https://prodigy.myresman.com/Portal/Access/SignIn",
+						icon: "material-symbols:bedroom-parent-outline-rounded"
 					},
 					{
-						name: "Drive",
-						url: "https://drive.google.com/drive/u/1/my-drive",
-						icon: "material-symbols:add-to-drive"
+						name: "Xfinity",
+						url: "https://www.xfinity.com/national/",
+						icon: "arcticons:xfinity"
 					},
 					{
 						name: "Docs",

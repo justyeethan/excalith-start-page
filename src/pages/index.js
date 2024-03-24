@@ -6,7 +6,6 @@ import "@fontsource/fira-code/400.css"
 import "@fontsource/fira-code/600.css"
 import { useSettings } from "@/context/settings"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
 	const { settings } = useSettings()
@@ -66,7 +65,6 @@ export default function Home() {
 	return (
 		<main className={"transition-all duration-200 ease-in-out"}>
 			<SpeedInsights />
-			<Analytics />
 			{isReady && (
 				<>
 					<Meta />

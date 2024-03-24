@@ -73,7 +73,7 @@ export default function Home() {
 					{settings.wallpaper.url && (
 						<Image
 							alt=""
-							className={`transition-opacity w-screen h-screen -z-50 
+							className={`transition-opacity w-screen h-screen -z-50
 							${settings.wallpaper.easing}
 							${settings.wallpaper.fadeIn && "duration-1000"}
 							${settings.wallpaper.blur && "blur-wallpaper"}

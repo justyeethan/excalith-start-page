@@ -20,17 +20,16 @@ const Search = ({ commandChange, selectionChange }) => {
 		setTimeout(() => inputRef.current.focus(), 0)
 	}, [inputFocus])
 
-	console.log(command)
 	// Key Down
 	useEffect(() => {
 		const handleKeyDown = (e) => {
 			// Submit prompt
 			if (e.key === "Enter") {
 				RunCommand(command, settings)
-				// inputRef.current.value = ""
-				// selectionChange("")
-				// commandChange("")
-				// setSuggestion("")
+				inputRef.current.value = ""
+				selectionChange("")
+				commandChange("")
+				setSuggestion("")
 			}
 			// Clear prompt
 			else if ((e.metaKey || e.ctrlKey) && e.code === "KeyC") {

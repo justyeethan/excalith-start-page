@@ -11,7 +11,10 @@ export function RunCommand(command, settings) {
 	if (registeredCommands.includes(cmd_split[0])) {
 		publish("command", cmd_split)
 	} else if (isURL(command)) {
-		openLink("https://" + command, settings.urlLaunch.target)
+		openLink(
+			(/^https?:\/\//.test(command) ? "" : "https://") + command,
+			settings.urlLaunch.target
+		)
 	} else if (tryParseSearchShortcut(command, settings)) {
 		return
 	} else {
@@ -35,18 +38,24 @@ function openFilteredLinks(command, settings) {
 
 	let filterCount = filteredUrls.length
 	if (filterCount === 0) {
-		const defaultSerachEngine = settings.search.default
-		const target = settings.search.target
-		openLink(defaultSerachEngine + command, target)
+		DefaultSearch(command, settings)
 	} else {
 		filteredUrls.map((url, index) => {
-			openLink(url, index === filterCount - 1 ? "_self" : "_blank")
+			const target = index === filterCount - 1 ? settings.urlLaunch.target : "_blank"
+			openLink(url, target)
 		})
 	}
 }
 
+export function DefaultSearch(buffer, settings) {
+	const searchEngine = settings.search.default
+	const target = settings.search.target
+
+	const encodedBuffer = encodeURIComponent(buffer)
+	openLink(searchEngine.replace("{}", encodedBuffer), target)
+}
+
 function tryParseSearchShortcut(command, settings) {
-	// Split command and query seperated by shortcut regex
 	var commandPattern = new RegExp(settings.search.shortcutRegex, "g")
 	let matchAll = command.matchAll(commandPattern)
 	matchAll = Array.from(matchAll)
@@ -60,7 +69,9 @@ function tryParseSearchShortcut(command, settings) {
 
 		if (name === regex_cmd[1]) {
 			const url = commandData.url
-			openLink(url.replace("{}", regex_cmd[2]), settings.urlLaunch.target)
+
+			const encodedBuffer = encodeURIComponent(regex_cmd[2])
+			openLink(url.replace("{}", encodedBuffer), settings.urlLaunch.target)
 			return true
 		}
 	}

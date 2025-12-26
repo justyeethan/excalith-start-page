@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import { RunCommand } from "@/utils/command"
+import { RunCommand, DefaultSearch } from "@/utils/command"
 import Prompt from "@/components/Prompt"
 import { useSettings } from "@/context/settings"
 
@@ -23,16 +23,14 @@ const Search = ({ commandChange, selectionChange }) => {
 	// Key Down
 	useEffect(() => {
 		const handleKeyDown = (e) => {
+			const isCtrlPressed = e.metaKey || e.ctrlKey
 			// Submit prompt
 			if (e.key === "Enter") {
-				RunCommand(command, settings)
-				inputRef.current.value = ""
-				selectionChange("")
-				commandChange("")
-				setSuggestion("")
+				const search_function = isCtrlPressed ? DefaultSearch : RunCommand
+				search_function(command, settings)
 			}
 			// Clear prompt
-			else if ((e.metaKey || e.ctrlKey) && e.code === "KeyC") {
+			else if (isCtrlPressed && e.code === "KeyC") {
 				if (settings.prompt.ctrlC) {
 					inputRef.current.value = ""
 					selectionChange("")
@@ -91,6 +89,7 @@ const Search = ({ commandChange, selectionChange }) => {
 		return () => {
 			document.removeEventListener("keydown", handleKeyDown)
 		}
+		// eslint-disable-next-line
 	}, [command, suggestion, selection, filteredItems, settings])
 
 	// Filter possible items
@@ -105,6 +104,7 @@ const Search = ({ commandChange, selectionChange }) => {
 			const filtered = items.filter((item) => item.startsWith(command))
 			setFilteredItems(filtered)
 		}
+		// eslint-disable-next-line
 	}, [command, items])
 
 	// Set suggestions
@@ -117,6 +117,7 @@ const Search = ({ commandChange, selectionChange }) => {
 		} else {
 			setSuggestion(filteredItems[0])
 		}
+		// eslint-disable-next-line
 	}, [filteredItems])
 
 	return (
@@ -124,7 +125,7 @@ const Search = ({ commandChange, selectionChange }) => {
 			<Prompt />
 			<div id="search-container" className="flex grow ml-2.5">
 				<input
-					className={`z-10 w-full bg-transparent text-white outline-none appearance-none shadow-none caret-${settings.prompt.caretColor}`}
+					className={`z-10 w-full bg-transparent text-textColor outline-none appearance-none shadow-none caret-${settings.prompt.caretColor}`}
 					type="text"
 					placeholder={settings.prompt.placeholder}
 					ref={inputRef}
@@ -140,7 +141,7 @@ const Search = ({ commandChange, selectionChange }) => {
 					}}
 				/>
 				<input
-					className={`-z-10 opacity-50 w-full -ml-full bg-transparent text-white outline-none appearance-none shadow-none caret-${settings.prompt.caretColor}`}
+					className={`-z-10 opacity-50 w-full -ml-full bg-transparent text-textColor outline-none appearance-none shadow-none caret-${settings.prompt.caretColor}`}
 					type="text"
 					disabled
 					placeholder={suggestion}

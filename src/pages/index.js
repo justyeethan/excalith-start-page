@@ -5,7 +5,6 @@ import Terminal from "@/components/Terminal"
 import "@fontsource/fira-code/400.css"
 import "@fontsource/fira-code/600.css"
 import { useSettings } from "@/context/settings"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import { fetchAsset } from "@/utils/fetchAsset"
 
 export default function Home() {
@@ -86,7 +85,6 @@ export default function Home() {
 
 	return (
 		<main className={"transition-all duration-200 ease-in-out"}>
-			<SpeedInsights />
 			{isReady && (
 				<>
 					<Meta />
